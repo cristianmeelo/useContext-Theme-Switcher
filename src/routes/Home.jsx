@@ -1,18 +1,20 @@
 // ~ Dependencies
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 
 // ~ Contexts
-import { ThemeContext } from '../context/ThemeContext';
-
+import { ThemeContext } from "../context/ThemeContext";
 
 export const Home = () => {
-
-    const {theme, toggleTheme} = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div>
-        <h1>Páginal Inicial</h1>
-        <p>O tema atual é: {theme}</p>
+      <h1>Páginal Inicial</h1>
+      <br/>
+      <button onClick={toggleTheme}>Mudar tema</button>
+      <br/>
+      <br/>
+      <p>O tema atual é: {theme}</p>
     </div>
-  )
-}
+  );
+};
